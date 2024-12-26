@@ -1,0 +1,212 @@
+14-Jul-2024 10:48:30.515 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log inicializando la aplicacion!
+14-Jul-2024 10:48:32.125 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+14-Jul-2024 10:48:32.125 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+14-Jul-2024 10:48:32.126 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@25b14faf')
+14-Jul-2024 10:48:36.280 INFORMACIÓN [http-nio-8080-exec-1] org.apache.catalina.core.ApplicationContext.log destruyendo la aplicacion!
+14-Jul-2024 10:48:36.981 INFORMACIÓN [http-nio-8080-exec-1] org.apache.catalina.core.ApplicationContext.log inicializando la aplicacion!
+14-Jul-2024 10:48:40.709 INFORMACIÓN [http-nio-8080-exec-2] org.apache.catalina.core.ApplicationContext.log inicializando el request!
+14-Jul-2024 10:48:41.457 GRAVE [http-nio-8080-exec-2] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() para servlet [default] lanzó excepción
+	java.lang.RuntimeException: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+		at org.aguzman.apiservlet.webapp.headers.filters.ConexionFilter.doFilter(ConexionFilter.java:33)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+	Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+		at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+		at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+		at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828)
+		at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:448)
+		at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241)
+		at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+		at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+		at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+		at org.aguzman.apiservlet.webapp.headers.util.ConexionBaseDatos.getConnection(ConexionBaseDatos.java:15)
+		at org.aguzman.apiservlet.webapp.headers.filters.ConexionFilter.doFilter(ConexionFilter.java:18)
+		... 19 more
+14-Jul-2024 10:48:41.457 INFORMACIÓN [http-nio-8080-exec-2] org.apache.catalina.core.ApplicationContext.log destruyendo el request!
+14-Jul-2024 10:55:22.363 INFORMACIÓN [http-nio-8080-exec-11] org.apache.catalina.core.ApplicationContext.log inicializando el request!
+14-Jul-2024 10:55:22.450 GRAVE [http-nio-8080-exec-11] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() para servlet [default] lanzó excepción
+	java.lang.RuntimeException: java.sql.SQLSyntaxErrorException: Unknown database 'java_curso'
+		at org.aguzman.apiservlet.webapp.headers.filters.ConexionFilter.doFilter(ConexionFilter.java:33)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+	Caused by: java.sql.SQLSyntaxErrorException: Unknown database 'java_curso'
+		at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+		at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+		at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828)
+		at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:448)
+		at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241)
+		at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+		at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+		at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+		at org.aguzman.apiservlet.webapp.headers.util.ConexionBaseDatos.getConnection(ConexionBaseDatos.java:15)
+		at org.aguzman.apiservlet.webapp.headers.filters.ConexionFilter.doFilter(ConexionFilter.java:18)
+		... 19 more
+14-Jul-2024 10:55:22.451 INFORMACIÓN [http-nio-8080-exec-11] org.apache.catalina.core.ApplicationContext.log destruyendo el request!
+14-Jul-2024 10:55:23.643 INFORMACIÓN [http-nio-8080-exec-12] org.apache.catalina.core.ApplicationContext.log inicializando el request!
+14-Jul-2024 10:55:23.668 GRAVE [http-nio-8080-exec-12] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() para servlet [default] lanzó excepción
+	java.lang.RuntimeException: java.sql.SQLSyntaxErrorException: Unknown database 'java_curso'
+		at org.aguzman.apiservlet.webapp.headers.filters.ConexionFilter.doFilter(ConexionFilter.java:33)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+	Caused by: java.sql.SQLSyntaxErrorException: Unknown database 'java_curso'
+		at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+		at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+		at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828)
+		at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:448)
+		at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241)
+		at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+		at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+		at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+		at org.aguzman.apiservlet.webapp.headers.util.ConexionBaseDatos.getConnection(ConexionBaseDatos.java:15)
+		at org.aguzman.apiservlet.webapp.headers.filters.ConexionFilter.doFilter(ConexionFilter.java:18)
+		... 19 more
+14-Jul-2024 10:55:23.668 INFORMACIÓN [http-nio-8080-exec-12] org.apache.catalina.core.ApplicationContext.log destruyendo el request!
+14-Jul-2024 11:01:56.774 GRAVE [http-nio-8080-exec-15] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() para servlet [org.icid.apiservlet.webapp.controllers.CursoServlet] lanzó excepción
+	java.lang.RuntimeException: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+		at org.icid.apiservlet.webapp.filters.ConexionFilter.doFilter(ConexionFilter.java:34)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+	Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+		at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+		at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+		at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828)
+		at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:448)
+		at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241)
+		at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+		at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+		at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+		at org.icid.apiservlet.webapp.util.ConexionBaseDatos.getConnection(ConexionBaseDatos.java:13)
+		at org.icid.apiservlet.webapp.filters.ConexionFilter.doFilter(ConexionFilter.java:19)
+		... 19 more
+14-Jul-2024 11:02:56.402 GRAVE [http-nio-8080-exec-12] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() para servlet [org.icid.apiservlet.webapp.controllers.CursoServlet] lanzó excepción
+	java.lang.RuntimeException: java.sql.SQLSyntaxErrorException: Unknown database 'java_curso'
+		at org.icid.apiservlet.webapp.filters.ConexionFilter.doFilter(ConexionFilter.java:34)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+	Caused by: java.sql.SQLSyntaxErrorException: Unknown database 'java_curso'
+		at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+		at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+		at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828)
+		at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:448)
+		at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241)
+		at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+		at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+		at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+		at org.icid.apiservlet.webapp.util.ConexionBaseDatos.getConnection(ConexionBaseDatos.java:14)
+		at org.icid.apiservlet.webapp.filters.ConexionFilter.doFilter(ConexionFilter.java:19)
+		... 19 more
+14-Jul-2024 11:33:31.416 INFORMACIÓN [http-nio-8080-exec-23] org.apache.catalina.core.ApplicationContext.log inicializando el request!
+14-Jul-2024 11:33:31.493 INFORMACIÓN [http-nio-8080-exec-23] org.apache.catalina.core.ApplicationContext.log destruyendo el request!
+14-Jul-2024 11:33:34.689 INFORMACIÓN [http-nio-8080-exec-24] org.apache.catalina.core.ApplicationContext.log inicializando el request!
+14-Jul-2024 11:33:34.743 INFORMACIÓN [http-nio-8080-exec-24] org.apache.catalina.core.ApplicationContext.log destruyendo el request!
+14-Jul-2024 11:33:42.775 INFORMACIÓN [http-nio-8080-exec-25] org.apache.catalina.core.ApplicationContext.log inicializando el request!
+14-Jul-2024 11:33:42.806 INFORMACIÓN [http-nio-8080-exec-25] org.apache.catalina.core.ApplicationContext.log inicializando la sesion http
+14-Jul-2024 11:33:42.813 INFORMACIÓN [http-nio-8080-exec-25] org.apache.catalina.core.ApplicationContext.log destruyendo el request!
+14-Jul-2024 11:33:45.882 INFORMACIÓN [http-nio-8080-exec-26] org.apache.catalina.core.ApplicationContext.log inicializando el request!
+14-Jul-2024 11:33:46.982 INFORMACIÓN [http-nio-8080-exec-26] org.apache.catalina.core.ApplicationContext.log destruyendo el request!
+14-Jul-2024 11:33:54.728 INFORMACIÓN [http-nio-8080-exec-27] org.apache.catalina.core.ApplicationContext.log inicializando el request!
+14-Jul-2024 11:33:54.745 INFORMACIÓN [http-nio-8080-exec-27] org.apache.catalina.core.ApplicationContext.log destruyendo el request!
+14-Jul-2024 11:42:13.377 INFORMACIÓN [http-nio-8080-exec-29] org.apache.catalina.core.ApplicationContext.log inicializando el request!
+14-Jul-2024 11:42:13.424 INFORMACIÓN [http-nio-8080-exec-29] org.apache.catalina.core.ApplicationContext.log destruyendo el request!
+14-Jul-2024 11:42:17.938 INFORMACIÓN [http-nio-8080-exec-30] org.apache.catalina.core.ApplicationContext.log inicializando el request!
+14-Jul-2024 11:42:18.033 INFORMACIÓN [http-nio-8080-exec-30] org.apache.catalina.core.ApplicationContext.log destruyendo el request!
+14-Jul-2024 11:42:26.784 INFORMACIÓN [http-nio-8080-exec-31] org.apache.catalina.core.ApplicationContext.log inicializando el request!
+14-Jul-2024 11:42:26.802 INFORMACIÓN [http-nio-8080-exec-31] org.apache.catalina.core.ApplicationContext.log destruyendo el request!
+14-Jul-2024 12:19:32.602 INFORMACIÓN [Catalina-utility-2] org.apache.catalina.core.ApplicationContext.log destruyendo la sesion http
+14-Jul-2024 16:08:39.424 INFORMACIÓN [http-nio-8080-exec-24] org.apache.catalina.core.ApplicationContext.log inicializando el request!
+14-Jul-2024 16:08:39.571 INFORMACIÓN [http-nio-8080-exec-24] org.apache.catalina.core.ApplicationContext.log destruyendo el request!
+14-Jul-2024 16:50:28.210 INFORMACIÓN [http-nio-8080-exec-27] org.apache.catalina.core.ApplicationContext.log inicializando el request!
+14-Jul-2024 16:50:28.300 INFORMACIÓN [http-nio-8080-exec-27] org.apache.catalina.core.ApplicationContext.log destruyendo el request!
+14-Jul-2024 16:50:53.792 INFORMACIÓN [http-nio-8080-exec-30] org.apache.catalina.core.ApplicationContext.log inicializando el request!
+14-Jul-2024 16:50:53.984 INFORMACIÓN [http-nio-8080-exec-30] org.apache.catalina.core.ApplicationContext.log destruyendo el request!
+14-Jul-2024 16:51:38.264 INFORMACIÓN [http-nio-8080-exec-32] org.apache.catalina.core.ApplicationContext.log inicializando el request!
+14-Jul-2024 16:51:38.303 INFORMACIÓN [http-nio-8080-exec-32] org.apache.catalina.core.ApplicationContext.log inicializando la sesion http
+14-Jul-2024 16:51:38.307 INFORMACIÓN [http-nio-8080-exec-32] org.apache.catalina.core.ApplicationContext.log destruyendo el request!
+14-Jul-2024 16:51:41.452 INFORMACIÓN [http-nio-8080-exec-23] org.apache.catalina.core.ApplicationContext.log inicializando el request!
+14-Jul-2024 16:51:41.488 INFORMACIÓN [http-nio-8080-exec-23] org.apache.catalina.core.ApplicationContext.log destruyendo el request!
+14-Jul-2024 17:39:13.379 INFORMACIÓN [Catalina-utility-1] org.apache.catalina.core.ApplicationContext.log destruyendo la sesion http

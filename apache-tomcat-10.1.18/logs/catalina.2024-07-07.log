@@ -1,0 +1,8 @@
+07-Jul-2024 22:41:44.497 INFORMACIÓN [http-nio-8080-exec-26] org.apache.catalina.startup.HostConfig.undeploy Repliegue (undeploy) de la aplicación web que tiene como trayectoria de contexto [/webapp-session]
+07-Jul-2024 22:41:44.602 INFORMACIÓN [http-nio-8080-exec-26] org.apache.catalina.startup.HostConfig.deployWAR Despliegue del archivo [/Users/israellcid/Documents/MasterCompletoJava2024/apache-tomcat-10.1.18/webapps/webapp-session.war] de la aplicación web
+07-Jul-2024 22:41:45.759 INFORMACIÓN [http-nio-8080-exec-26] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+07-Jul-2024 22:41:45.764 INFORMACIÓN [http-nio-8080-exec-26] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/Users/israellcid/Documents/MasterCompletoJava2024/apache-tomcat-10.1.18/webapps/webapp-session.war] has finished in [1.162] ms
+07-Jul-2024 23:24:47.509 INFORMACIÓN [Thread-1] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+07-Jul-2024 23:24:47.518 INFORMACIÓN [Thread-1] org.apache.catalina.core.StandardService.stopInternal Parando servicio [Catalina]
+07-Jul-2024 23:24:47.599 INFORMACIÓN [Thread-1] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+07-Jul-2024 23:24:47.632 INFORMACIÓN [Thread-1] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
